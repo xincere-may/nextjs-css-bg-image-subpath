@@ -1,10 +1,15 @@
 import Image from "next/image";
+import imageNext from "@/public/images/next.svg";
+import imageVercel from "@/public/images/vercel.svg";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description} style={{ backgroundImage: 'url(/vercel.svg)' }}>
+      <div className={styles.description} style={{
+        backgroundImage: `url(${imageVercel.src})`,
+
+      }}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
@@ -22,7 +27,7 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src={imageNext}
           alt="Next.js Logo"
           width={180}
           height={37}
